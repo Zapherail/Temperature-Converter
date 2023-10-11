@@ -1,0 +1,27 @@
+package chapt3_assign3.pkg1_sharprobert;
+import java.util.Scanner;
+public class Chapt3_Assign31_SharpRobert {
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to the Temperature Converter"); //Header
+        System.out.println(""); //Space
+        
+        Scanner sc = new Scanner(System.in); //Making the reader
+        
+        String choice = "y"; //choice for while loop
+        while (choice.equalsIgnoreCase("Y")){ //While loop starts
+            System.out.print("Enter degrees in Farenheit: "); //Asking user question
+            String userTemp = sc.nextLine(); // Saving user answer
+            float userTempNum = Float.parseFloat(userTemp); //Converting user anwser to a float. 
+            float displayCelsius = (userTempNum - 32) * 5/9; //Using math
+            System.out.print("Degrees in Celsius: "); //Asking question
+            System.out.printf("%.2f%n", displayCelsius); //Formatting pg.104-105
+            System.out.print("Continue? (y/n): "); //Continue or break the loop
+            choice = sc.nextLine();
+        }
+            
+            
+        
+    }
+    
+}
